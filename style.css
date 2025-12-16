@@ -1,0 +1,293 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #fff;
+    
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(76, 175, 80, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    min-width: 120px;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background: #45a049;
+    transition: 0.3s;
+}
+
+
+/* ================= HERO SECTION ================= */
+.hero {
+    background-image: url("images/tippufort.jpg");
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 80px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+}
+
+/* ================= ABOUT SECTION ================= */
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80vh;
+}
+
+.about-image {
+    flex: 1;
+    background-image: url("images/about image.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.about-content {
+    flex: 1;
+    padding: 60px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* ================= HISTORY SECTION ================= */
+.history-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    
+}
+
+.history-content {
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.history-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.history-content p {
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* ================= PLACES SECTION ================= */
+.places {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ecf0f1;
+}
+
+.places h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.place-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* CARD */
+.place-card {
+    width: 300px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-10px);
+}
+
+/* IMAGE (FROM CSS) */
+.place-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* TEXT BELOW IMAGE */
+.place-text {
+    padding: 15px;
+    color: #000;
+}
+
+.place-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.place-text p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* BACKGROUND IMAGES */
+.fort {
+    background-image: url("images/tippufort.jpg");
+}
+
+.malampuzha {
+    background-image: url("images/malampuzha dam.png");
+}
+
+.silentvalley {
+    background-image: url("images/silent valley.png");
+}
+
+.nelliyampathy {
+    background-image: url("images/nelliampathy.jpg");
+}
+
+.parambikulam {
+    background-image: url("images/parambikulam.jpg");
+}
+
+.Kava {
+    background-image: url("images/kava.png");
+}
+
+.Varikkasery {
+    background-image: url("images/varikkasery mana.png");
+}
+
+.kalpathy {
+    background-image: url("images/Kalpathi_Ratholsavam.png")
+}
+.history-section,
+.places,
+.about-section {
+    scroll-margin-top: 90px;
+}
+
+.map-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.map-section h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-image {
+        min-height: 250px;
+    }
+
+    .about-content {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .places h2 {
+        font-size: 2rem;
+    }
+
+    .place-card {
+        width: 90%;
+    }
+}
+
+
