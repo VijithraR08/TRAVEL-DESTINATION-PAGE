@@ -48,7 +48,7 @@ body {
 
 /* ================= HERO SECTION ================= */
 .hero {
-    background-image: url("images/tippufort.jpg");
+    background-image: url("/TRAVEL-DESTINATION-PAGE/images/tippufort.jpg");
     background-size: cover;
     background-position: center;
     height: calc(100vh - 80px);
@@ -289,5 +289,6 @@ body {
         width: 90%;
     }
 }
+
 
 
